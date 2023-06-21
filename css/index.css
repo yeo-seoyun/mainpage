@@ -225,7 +225,7 @@ section h1{
 }
 .croImg{
   position: relative;
-  width: 60%;
+  width: 850px;
   height: 100%;
   margin: auto;
   align-items: center;
@@ -239,6 +239,7 @@ section h1{
   width: 100%;
 }
 .croImg ul li img{
+  cursor: pointer;
   transition: 0.3s;
 }
 .croImg ul li img:hover{
@@ -258,7 +259,7 @@ section h1{
   width: 50px;
   height: 50px;
   top: 170px;
-  left: 10%;
+  left: 20%;
   font-size: 50px;
   color: #ffe3bf;
   transition: 0.3s;
@@ -269,7 +270,7 @@ section h1{
   width: 50px;
   height: 50px;
   top: 170px;
-  right: 10%;
+  right: 20%;
   font-size: 50px;
   color: #ffe3bf;
   transition: 0.3s;
