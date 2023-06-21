@@ -18,15 +18,18 @@
   font-weight: normal;
   font-style: normal;
 }
+/* -------------------------------------------------- */
 
-/* ___________________________________________ */
+
+
 body{
   width: 100%;
   font-family: 'S-CoreDream-3Light';
   user-select: none;
+  background-color: #fff;
 }
 
-/* _____TOP_____ */
+/* Top Button */
 .top{
   position: fixed;
   right: 50px;
@@ -47,75 +50,83 @@ body{
 }
 
 
-/* _____HEADER_____ */
+/* Header */
 header{
   width: 100%;
-  height: 80px;
+  height: 85px;
   background-color: rgb(237, 217, 187);
   position: relative;
-  border-bottom: 50px solid #fffcf9;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 nav{
-  width: 1200px;
-  height: inherit;
+  width: 100%;
+  height: 50px;
   margin: auto;
-  justify-content: center;
-  z-index: 10;
 }
-nav .logo {
-  width: 120px;
-  height: 80px;
-  line-height: 100px;
-  margin: auto;
-  justify-content: center;
-}
-.gnb{
-  display: flex;
-  width: 800px;
-  height: 40px;
-  margin: auto;
-  justify-content: center;
-  text-align: center;
-  padding-bottom: 8px;
+nav .gnb{
   position: relative;
+  width: 40%;
+  height: 50px;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  display: flex;
 }
-.gnb>.main{flex: 1;}
-.gnb>.main>a{
-  font-size: 23px;
-  color: rgb(182, 133, 81);
+.gnb .main{
+  width: 100%;
+  height: 100%;
+}
+.gnb .main p {
+  margin: 5px auto ;
+  align-items: center;
+  height: 40px;
+  width: 120px;
+  color: rgb(122, 102, 81);  
+  font-size: 18px;
+  line-height: 40px;
+
+  border-radius: 10px;
   transition: 0.3s;
-  line-height: 50px;
 }
-.gnb>.main>a:hover{color:rgb(80, 46, 11);}
+.gnb .main p:hover{
+  color:#fff;
+  background-color: #dfc8aa;
+}
 
 /* sub menu */
-.sub{
+.gnb .main .sub{
   display: none;
   position: absolute;
   top: 100%;
-  width: 160px;
+  width: 20%;
   height: 170px;
   background-color: #ffffff8f;
-  z-index: 200;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  z-index: 500;
 }
 .sub li{
-  width: inherit;
+  width: 100%;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.5s;
 }
+.sub li:hover {
+  background-color: #dbb1806b;
+}
 .sub li a{
-  font-size: 20px;
+  font-size: 15px;
   color: rgb(49, 29, 9);
   transition: 0.3s;
 }
 .sub li a:hover{font-weight: bold;}
 
-
-
-/* _____MAIN_____ */
+/* Main visual */
 #main{
   width: 100%;
   height: 600px;
@@ -138,83 +149,58 @@ nav .logo {
 
 
 
-/* TXT slide */
+/* Marquee */
 .animated-title{
   width: 100%;
+  height: 80px;
   font-size: 50px;
   font-family: 'Cafe24ClassicType-Regular';
   color: rgb(243, 207, 164);
-  position: relative; 
-  max-width:100%; 
-  height: auto;
-  padding: 50px 0;
 }
-.animated-title .track{
-  position: absolute; 
-  white-space: nowrap;
-  animation: textslide 60s linear infinite; 
-}
-@keyframes textslide {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-.animated-title .content {
-  -webkit-transform: translateY(calc(100% - 5rem)); 
-  transform: translateY(calc(100% - 5rem));
-}
-
-
-/* _____CONTENT_____ */
-.tap{
-  text-align: center;
-  padding-top: 30px;
+marquee {
   width: 100%;
-  height: 100px;
+  height: 100%;
 }
-.tap h1{
+
+
+/* Section h1 (공통)*/
+
+section h1{
   position: relative;
-  display: inline-block;
-  font-size: 35px;
+  display: block;
+  margin: 20px 0;
+  width: 100%;
   text-align: center;
+  font-size: 35px;
   text-transform: uppercase;
   color: rgb(69, 44, 3);
 }
-.tap h1:before{
-  position: absolute;
-  content: '';
-  width: 0;
-  height: 3px;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -10px;
-  background-color: rgb(201, 165, 118);
-  transition: 0.3s;
-}
-.tap :hover:before{width: 100%;}
 
-/* 001 product */
+/* sec01 product */
 #product{
   width: 100%;
-  height: 650px;
+  height: 600px;
 }
-.pro ul{
+.pro_tab {
+  width: 30%;
+  margin: auto;
+}
+.pro_tab .tab{
   display: flex;
-  height: 30px;
-  width: 500px;
-  margin: auto;
-}
-.pro>ul>li{
-  margin: auto;
   justify-content: space-between;
+  margin: auto;
+  width: 100%;
+}
+.pro_tab .tab li{
   color: rgb(144, 118, 83);
   font-size: 25px;
   transition: 0.3s;
 }
-.pro >ul >li:hover{
+.pro_tab .tab li:hover{
   color: rgb(86, 68, 44); 
   font-weight: bold;
 }
-.pro >ul >li.active{
+.pro_tab .tab li.active{
   color: rgb(86, 68, 44); 
   font-weight: bold;
 }
@@ -232,59 +218,64 @@ nav .logo {
 
 /* menu */
 .menu{
-  width: 1200px;
+  width: 90%;
   height: 400px;
   margin: auto;
   position: relative;
 }
 .croImg{
-  position: absolute;
-  width: 900px;
-  top: 90px;
-  left: 150px;
+  position: relative;
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  align-items: center;
   overflow: hidden;
 }
 .croImg ul{
+  position: absolute;
   display: flex;
-  margin: auto;
-  width: 900px;
-  height: 200px;
-  overflow: hidden;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
 }
-.croImg ul li{
-  margin: auto;
-  justify-content: center;
+.croImg ul li img{
+  transition: 0.3s;
 }
-.croImg ul li img{transition: 0.3s;}
-.croImg ul li img:hover{transform: scale(1.2);}
-.menu .croImg{display: none;}
-.menu .croImg.active{display: block;}
+.croImg ul li img:hover{
+  transform: scale(1.2);
+}
+.menu .croImg{
+  display: none;
+}
+.menu .croImg.active{
+  display: block;
+}
 
 /* 좌우버튼 */
 .ban_left{
+  cursor: pointer;
   position: absolute;
   width: 50px;
   height: 50px;
   top: 170px;
-  left: 0;
+  left: 10%;
   font-size: 50px;
   color: #ffe3bf;
   transition: 0.3s;
 }
 .ban_right{
+  cursor: pointer;
   position: absolute;
   width: 50px;
   height: 50px;
   top: 170px;
-  right: 0;
+  right: 10%;
   font-size: 50px;
   color: #ffe3bf;
   transition: 0.3s;
 }
 .ban_left:hover{color: rgb(224, 183, 121);}
 .ban_right:hover{color: rgb(224, 183, 121);}
-
-
 
 
 /* 002 about*/
@@ -326,7 +317,7 @@ nav .logo {
   50%{transform: scale(1);}
   100%{transform: scale(0.9);}
 }
-/* img */
+
 .aimg{
   width: 900px;
   margin: auto;
@@ -467,16 +458,21 @@ nav .logo {
 
 
 /* 004 map*/
-#map{
+.sec04 {
   width: 100%;
-  height: 650px;
+  height: 580px;
   background-color: #f8f8f8;
   font-family: fontawesome;
 }
-#map h1{margin-bottom: 30px;}
+#map{
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
 .maps{
   display: flex;
-  width: 1200px;
+  width: 70%;
   height: 450px;
   margin: auto;
   justify-content: space-between;
@@ -490,10 +486,9 @@ nav .logo {
 }
 /* 검색 */
 .search{
-  width: 500px;
+  width: 50%;
   height: 450px;
   text-align: center;
-  margin-right: 10px;
   position: relative;
 }
 .search p{
@@ -514,17 +509,20 @@ nav .logo {
   position: absolute;
   content:"\f002";
   font-size: 27px;
-  right: 125px;
+  right: 25%;
   color: #c0c0c0;
+  transition: 0.3s;
+}
+.icon:hover:before {
+  color: #727272;
 }
 .search ul{
   display: flex;
   justify-content: space-between;
 }
-.search .search2{
-  font-size: 20px;
+.search .search2 li{
+  font-size: 23px;
   font-weight: bold;
-  margin: 25px;
 }
 .search ul:not(.top){
   font-size: 18px;

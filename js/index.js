@@ -7,8 +7,6 @@ $(document).ready(function () {
     $(this).find(".main .sub").stop().slideUp();
   });
 
-  /* TEXT */
-
 
   /* MAIN */
   let $img = $(".mainimg ul li");
@@ -35,7 +33,7 @@ $(document).ready(function () {
 
 
   /* PRODUCT */
-  $(".pro ul li").click(function(){
+  $(".pro_tab ul li").click(function(){
 
     $(this).addClass("active");
     $(this).siblings().removeClass("active");
@@ -216,6 +214,4 @@ $(document).ready(function () {
     slideonImg(sindexon,1);
   };
   timeron=setInterval(slideonAuto,4000);
-
-
 });
